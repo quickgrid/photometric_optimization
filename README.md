@@ -49,6 +49,13 @@ After fitting, the computed texture offsets capture for each image the facial ap
 
 After completing these 1500 texture maps, we use principal component analysis (PCA) to compute a texture space. 
 
+## Downloads
+
+- Create `model` folder in base directory.
+- Download pretrained model from `face-parsing.PyTorch`, rename to `face_seg.pth` and put into `model` folder.
+- Download `FLAME2020.zip`, `FLAME_texture_data.zip` and `TextureSpace.zip` from FLAME website and extract into `model` folder.
+- Download `s3fd.pth`, `2DFAN4-11f355bf06.pth.tar` again put into into `model` folder. [FAN](https://github.com/1adrianb/face-alignment/blob/master/face_alignment/api.py) can be found here.
+
 ## Demos
 The single image photometric fitting demo is implemented and tested in a conda environment with PyTorch 1.5 and PyTorch3D 0.2 in Python 3.8.3. For better CUDA supports, we recommend you to install PyTorch3D 0.2 via conda, 
 
