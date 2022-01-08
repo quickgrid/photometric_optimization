@@ -124,7 +124,7 @@ class PhotometricFitting(object):
             'tex': tex.detach().cpu().numpy(),
             'lit': lights.detach().cpu().numpy()
         }
-        util.draw_train_process("training", all_train_iters, photometric_loss, 'photometric loss')
+        # util.draw_train_process("training", all_train_iters, photometric_loss, 'photometric loss')
         # np.save("./test_results/model.npy", single_params)
         return single_params
 

@@ -130,6 +130,12 @@ class PhotometricFitting(object):
             image_masks = F.interpolate(image_masks, [cfg.image_size, cfg.image_size])
 
             single_params = self.optimize(images, landmarks, image_masks, all_param, out, first_flag)
+            
+            #self.render.save_obj(filename='output.obj',
+            #                 vertices=torch.from_numpy(single_params['verts'][0]).to(self.device),
+            #                 textures=torch.from_numpy(single_params['albedos'][0]).to(self.device)
+            #                 )
+            
             return single_params
 
 
